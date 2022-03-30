@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Com from './Com';
+import App from './App';
 
 
 // Component 
 ReactDOM.render(
   <React.StrictMode>
-    <Com />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

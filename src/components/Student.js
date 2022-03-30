@@ -1,7 +1,7 @@
 import AgeAdd from './Ageadd';
-import logo from './ca.png';
 import './Student.css';
 function Student(props){
+    var imagepath = "assests/images/"+props.img
     return (
         <div className="student-block">
             <div className="student-name">
@@ -13,9 +13,10 @@ function Student(props){
                 <p>{props.email}</p>
                 <p>Current: {props.age}</p>
                 <AgeAdd age={props.age}/>
-                
-                <img src={logo}/>
             </div >
+            <div className="student-image">
+                <img src={imagepath} alt="Not Found"/>
+            </div>
         </div>
     );
 }
