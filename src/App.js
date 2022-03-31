@@ -2,6 +2,8 @@ import Header from './layouts/Header';
 import Siderbar from './layouts/Sidebar';
 import Main from './components/Main';
 import Footer from './layouts/Footer';
+import Counters from './components/events/Counters';
+import TextHandle from './components/events/TextHandle';
 function Com(){
     const mydata = [
         {name:"Gaurav Vishist", email:"o7emp03@gmail.com",city:"Jalandhar",
@@ -13,10 +15,16 @@ function Com(){
     ]
     return(
         <div>
-            <Header/>
+            {/* <Header/>
             <Siderbar/>
             <Main/>
-            <Footer/>
+            <Footer/> */}
+            <Counters/>
+            <TextHandle
+                name={mydata[0].name}
+                email={mydata[0].email}
+                city={mydata[0].city}
+            />
         </div>
     );
 }
