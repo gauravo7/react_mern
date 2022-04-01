@@ -4,6 +4,9 @@ import Main from './components/Main';
 import Footer from './layouts/Footer';
 import Counters from './components/events/Counters';
 import TextHandle from './components/events/TextHandle';
+import Teacher from './components/events/Teacher';
+import Contact from './components/events/Contact';
+
 function Com(){
     const mydata = [
         {name:"Gaurav Vishist", email:"o7emp03@gmail.com",city:"Jalandhar",
@@ -20,11 +23,13 @@ function Com(){
             <Main/>
             <Footer/> */}
             <Counters/>
-            <TextHandle
+            {/* <TextHandle
                 name={mydata[0].name}
                 email={mydata[0].email}
                 city={mydata[0].city}
-            />
+            /> */}
+            <Teacher/>
+            <Contact name="Radhe sham" subject="Need Help in Project"/>
         </div>
     );
 }
