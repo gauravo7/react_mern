@@ -5,10 +5,12 @@ class Contact extends React.Component{
         super(props);
         this.state = props
         console.log(this.state)
+        this.textChanger = this.textChanger.bind(this)
     } 
     textChanger(event){
         console.log('You are Calling Text Changer');
         this.setState({name:"Kuldeep"})
+        console.log(this.state)
     }
     render(){
         return(

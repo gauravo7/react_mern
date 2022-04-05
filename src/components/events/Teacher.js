@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Teacher(){
+function Teacher(props){
     const [name,setName] = useState('Gaurav')
     const nameHandler = (event)=>{
         setName(event.target.value);
@@ -13,14 +13,26 @@ function Teacher(){
     const qualiHandler = (event)=>{
         setQuali(event.target.value);
     }
+
+    const [city,setCity] = useState('')
+    const cityHandler = (event)=>{
+        setCity(event.target.value);
+    }
     const submitHandler = (event)=>{
         event.preventDefault();
         let data = {
-            name: {name},
-            email:{email},
-            qualification:{quali}
+            name: name,
+            email:email,
+            qualification:quali,
+            age:18,
+            city:city,
+            img:"noimage.jpg",
         }
-        console.log(data);
+        props.onSaveTeacherData(data);
+        setCity('')
+        setName('')
+        setEmail('')
+        setQuali('')
     }
     return(
         <div>
@@ -37,6 +49,10 @@ function Teacher(){
                 <div>
                     <label>Qualification</label>
                     <input type="quali"value={quali} onChange={qualiHandler}/>
+                </div>
+                <div>
+                    <label>City</label>
+                    <input type="text"value={city} onChange={cityHandler}/>
                 </div>
                 <div>
                     <button type="submit">Save My Data</button>
